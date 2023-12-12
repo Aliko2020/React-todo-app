@@ -1,38 +1,65 @@
 .App {
   text-align: center;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header{
+  width: 100%;
+  height:30vh;
+  padding: 16px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header .top-box{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+}
+header .top-box h1{
   color: white;
+  font-size: 2rem;
+  font-width: Bold;
+}
+/* Desktop Styles */
+@media only screen and (min-width: 769px) {
+  header {
+    background-image: url('../src/images/bg-desktop-dark.jpg');
+  }
 }
 
-.App-link {
-  color: #61dafb;
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+  header {
+    background-image: url('../src/images/bg-mobile-dark.jpg');
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* form styles */
+form{
+  margin-top: 2rem;
+  
+}
+form .form-container{
+  display: flex;
+  width:100%;
+  background: hsl(235, 21%, 11%);
+  padding: .5rem;
+  border-radius: 5px;
+}
+form .form-container .rounded-box{
+  width: 2rem;
+  margin-right:.5rem;
+  border-radius: 50%;
+  border: 1.5px solid white;
+}
+form .form-container input{
+  width:80%;
+  border: none;
+  background: hsl(235, 21%, 11%);
+}
+form .form-container button{
+  color: white;
+  width: 1.5rem;
+  font-size: 1.5rem;
+  font-width: Bold;
 }
