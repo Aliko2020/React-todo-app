@@ -28,7 +28,7 @@ export const Todos = ({ todos }) => {
               </div>
               {todo}
             </div>
-            <div onClick={removeTodo}>
+            <div>
               <img src={cross} alt='cross svg' />
             </div>
           </li>
