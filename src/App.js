@@ -14,7 +14,7 @@ const [todos, setTodos] = useState([
 
 function addTodo(formInput, setFormInput){
   if (formInput.trim() !== '') {
-    setTodos([...todos, formInput]);
+    setTodos([formInput,...todos]);
     setFormInput('');
   }
 };

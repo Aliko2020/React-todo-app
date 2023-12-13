@@ -54,6 +54,9 @@ form .form-container .rounded-box{
   
 }
 .rounded-box{
+  display: flex;
+  justify-content:center;
+  align-items: center;
   width: 2rem;
   height: 2rem;
   margin-right:.5rem;
@@ -104,4 +107,7 @@ form .form-container button{
   justify-content: center;
   gap: 1rem;
   padding: 1rem;
+}
+.todos-container .todo-item.checked {
+  text-decoration: line-through;
 }
