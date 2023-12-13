@@ -13,7 +13,7 @@ export const Header = () => {
           <img src={modeImage2} alt='moon svg' />
         </button>
       </div>
-      <Form />
+      
     </header>
   )
 }

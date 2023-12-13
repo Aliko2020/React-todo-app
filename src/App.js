@@ -2,20 +2,26 @@ import './App.css';
 import { Header } from './Header';
 import { Todos } from './Todos';
 import { ButtomNav } from './ButtomNav';
+import { useState } from 'react';
+import { Form } from './Form';
 
 function App() {
-const todos = [
+const [todos, setTodos] = useState([
   'Jog around the park 3x',
   '10 minutes meditation',
-  'Read for 1 hour',
-  'Pick up groceries',
-  'Complete Todo App from Frontend '
-]
+  'Complete Todo app'
+])
 
-
+function addTodo(formInput, setFormInput){
+  if (formInput.trim() !== '') {
+    setTodos([...todos, formInput]);
+    setFormInput('');
+  }
+};
   return (
     <div className="App">
       <Header />
+      <Form addTodo={addTodo} />
       <Todos todos={todos} />
       <ButtomNav />
     </div>
