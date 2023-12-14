@@ -14,8 +14,11 @@ header{
   background-repeat: no-repeat;
 }
 header .top-box{
+  max-width: 600px;
   display: flex;
   justify-content: space-between;
+  margin: auto;
+  padding:1.5rem 1rem;
 }
 header .top-box .dark{
   color: white;
