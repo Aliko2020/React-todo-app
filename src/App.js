@@ -27,9 +27,11 @@ function addTodo(formInput, setFormInput){
   return (
     <div className="App">
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-      <Form addTodo={addTodo} darkMode={darkMode} />
-      <Todos todos={todos} darkMode={darkMode} />
-      <ButtomNav darkMode={darkMode} />
+      <div className='Main'>
+        <Form addTodo={addTodo} darkMode={darkMode} />
+        <Todos todos={todos} darkMode={darkMode} />
+        <ButtomNav darkMode={darkMode} />
+      </div>
     </div>
   );
 }
