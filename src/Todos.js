@@ -36,7 +36,7 @@ export const Todos = ({ todos, darkMode }) => {
         ))}
         <li className='todo-item-dark'>
           <div className={darkMode ? "todo-notification-dark" : "todo-notification-light"}>
-            <p className='notification'>{todos.length} Task left</p>
+            <p className='notification'>{todos.length} Task{todos.length > 1 ? "s" :""} left</p>
             <button >Clear Completed</button>
           </div>
         </li>
