@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const ButtomNav = () => {
+export const ButtomNav = ({darkMode}) => {
   return (
-    <div className='form-container'>
-        <div className='buttom-nav todos-container'>
+    <div className='nav-container'>
+        <div className={darkMode ? "bottom-nav-dark" : "bottom-nav-light"}>
             <span>All</span>
             <span>Active</span>
             <span>Completed</span>

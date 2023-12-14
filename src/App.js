@@ -6,6 +6,12 @@ import { useState } from 'react';
 import { Form } from './Form';
 
 function App() {
+const [darkMode, setDarkMode] = useState(true)
+
+function toggleDarkMode(){
+    setDarkMode(!darkMode)
+} 
+
 const [todos, setTodos] = useState([
   'Jog around the park 3x',
   '10 minutes meditation',
@@ -20,10 +26,10 @@ function addTodo(formInput, setFormInput){
 };
   return (
     <div className="App">
-      <Header />
-      <Form addTodo={addTodo} />
-      <Todos todos={todos} />
-      <ButtomNav />
+      <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <Form addTodo={addTodo} darkMode={darkMode} />
+      <Todos todos={todos} darkMode={darkMode} />
+      <ButtomNav darkMode={darkMode} />
     </div>
   );
 }

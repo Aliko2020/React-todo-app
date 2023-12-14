@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-export const Form = ({addTodo}) => {
+export const Form = ({addTodo, darkMode}) => {
   
   const [formInput, setFormInput] = useState('')
 
@@ -17,15 +17,20 @@ export const Form = ({addTodo}) => {
   }
   return (
     <form>
-        <div className='form-container'>
-            <div className='rounded-box'></div>
+        <div className={darkMode ? "form-container-dark" : "form-container-light"}>
+            <div className={darkMode ? "rounded-box-dark" : "rounded-box-light"}></div>
             <input 
+              className={darkMode ? "input-dark" : "input-light"}
               type='text' 
               placeholder='Create a new todo...' 
               value={formInput}
               onChange={handleForm}
             />
-            <button onClick={handleClick}>+</button>
+            <button 
+              className={darkMode ? "add-dark" : "add-light"}
+              onClick={handleClick}>+
+
+            </button>
         </div>
     </form>
   )
